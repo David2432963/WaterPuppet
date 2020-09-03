@@ -1,0 +1,273 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+--------------------------------
+body {
+	background-color: rgb(205, 221, 225);
+}
+h1 {
+	font-family: cursive;
+	font-size: 60px;
+	text-align: center;
+	color: blue;
+}
+
+.fade-in {
+	animation: fadeIn 1.5s;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.accordion {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+	margin-top: 15px;
+}
+
+.active, .accordion:hover {
+ 	background-color: #ccc;
+}
+.accordion:hover {
+	box-shadow: 0 12px 6px 0 rgba(0,0,0,0.24), 0 17px 10px 0 rgba(0,0,0,0.19);
+}
+
+.center{
+	margin-top: 10%;
+  	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.accordion:after {
+  content: '\002B'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\002D"; /* Unicode character for "minus" sign (-) */
+
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/*--------------------------------------*/
+.button:after {
+	color: #777;
+}
+.button {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	width: 76%;
+	padding: 16px;
+	transition: 0.4s;
+	margin-bottom: 15px;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+}
+.button:hover {
+	box-shadow: 0 12px 6px 0 rgba(0,0,0,0.24), 0 17px 10px 0 rgba(0,0,0,0.19);
+}
+.active, .button:hover {
+ 	background-color: #ccc;
+}
+.button_center {
+	text-align: center; 
+}
+.container {
+	margin-top: 15%;
+	font-family: sans-serif;
+}
+
+.search-box {
+	position: absolute;
+	top: 25%;
+	left: 80%;
+	transform: translate(-50%, -50%);
+	background: white;
+	border-radius: 40px;
+	padding: 10px;
+}
+/*.search-box:hover > .search-txt {
+	width: 240px;
+	padding: 0;
+}*/
+/*.search-box:hover > .fa-search{
+	background: white;
+}*/
+.fa-search {
+	color: blue;
+	float: right;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+	padding: 10px;
+}
+.search-txt {
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: black;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 240px;
+}
+
+.back-btn {
+	margin-top: 3%;
+	font-size: 40px;
+	color: blue;
+	position: absolute;
+}
+
+.keyboard-btn {
+	position: relative;
+	top: 120px;
+	margin-left: 84%;
+	user-select: none;
+	color: blue;
+
+	transition: 0.4s;
+}
+
+.keyboard-btn:hover {
+	cursor: pointer;
+}
+
+#virtualkeyboard {
+	position: relative;
+	margin-top: 7%;
+	padding-bottom: 20px
+	margin-bottom: 20px;
+
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+ul.keyboard {
+  list-style-type: none;
+  font-family: verdana;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0;
+  width: 100%;
+  height: 50%;
+}
+.keyboard li {
+  cursor: pointer;
+  display: inline;
+  float: left;
+  height: 18%;
+  line-height: 50px;
+  padding: 0;
+  margin: 0.3% 0.6% 0.6% 0.2%;
+  background-color: #ddd;
+  color: black;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 1vw;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.char {
+    width: 5.75%;
+    -webkit-transition: background-color 100ms;
+}
+
+.tab {
+  width: 20%;
+}
+
+.at {
+  width: 7.2%;
+}
+
+.last {
+  margin-right: 0%;
+}
+
+.backspace {
+  width: 14%;
+}
+
+.capslock {
+  width: 12%
+}
+
+.capslock.on {
+	background-color: #b3b3ff;
+}
+
+.return {
+  width: 14%;
+}
+
+.shift {
+  width: 7.2%;
+}
+
+.last {
+  margin-right: 0;
+}
+
+.space {
+  width: 99%;
+}
+
+.keyboard .touch {
+	background-color: #b3b3ff;
+}
