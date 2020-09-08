@@ -1,0 +1,12 @@
+ul{
+	list-style-type: none;
+}
+.flex { display: flex; flex-direction: column; }
+.a { order: -1; }
+.b { order: 2; }
+.c { order: 3; }
+.d { order: 4; }
+.flex img{
+	width: 500px;
+	height: 500px;
+}
