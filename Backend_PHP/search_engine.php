@@ -63,17 +63,20 @@ print "</table>";
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 <body>
-<form>
-	<input type="text" name="ten_item">
-	<button type="submit">Tim Kiem</button>
+<form style="width: 1280px;">
+	<h2 style="width: 260px;margin: auto;">Searching things</h2>
+	<div style="margin: auto;width: 400px;margin-top: 50px;margin-bottom: 50px;">
+		<input 	style=" height: 35px;width: 285px;position: relative;top: 3px; border-radius: 2px;" type="text" name="ten_item"  placeholder="<?php echo $ten_item ?>">
+		<button type="submit" class="btn btn-success">Search</button>
+	</div>
 </form>
 <div>
 	<?php  
 	if($ten_item!=''){
-	echo "<ul>";
+	echo "<ul class='list-group'>";
 	while( $row = $result->fetch_array() )
     {
-    	echo '<li><a href="/TestingRDF/itemDetail.php?item_name='.$row['item_name'].'" target="_blank">';
+    	echo '<li class="list-group-item"><a href="/TestingRDF/itemDetail.php?item_name='.$row['item_name'].'" target="_blank">';
     	echo $row['item_name'];
     	echo '</a></li>';
     	

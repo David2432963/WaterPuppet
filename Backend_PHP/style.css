@@ -10,3 +10,9 @@ ul{
 	width: 500px;
 	height: 500px;
 }
+.searchBar{
+    height: 35px;
+    width: 285px;
+    position: relative;
+	top: 3px;
+}
