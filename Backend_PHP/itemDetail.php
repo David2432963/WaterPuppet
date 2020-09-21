@@ -49,9 +49,6 @@ $fields = $result->field_array( $result );
   echo '<div class="flex">';
 while( $row = $result->fetch_array() )
 {
-
-  
-
     if($row['x']=="http://www.semanticweb.org/ontologies/2020/Water_puppet#ten_vo_roi"){
       echo '<div class="a">';
       echo "<h2>";
@@ -75,7 +72,9 @@ while( $row = $result->fetch_array() )
     }
     if($row['x']=="http://www.semanticweb.org/ontologies/2020/Water_puppet#anh"){
       echo "<div class='b'>";
+      echo "<div class='image'>";	
       echo '<img src="'.$row['y'].'"';
+      echo "</div>";
       echo "</div>";
       }    
     if($row['x']=="http://www.semanticweb.org/ontologies/2020/Water_puppet#mo_ta"){
@@ -93,7 +92,7 @@ while( $row = $result->fetch_array() )
 		$tham_gia_vao = $db->query( $sparql ); 
 		if( !$tham_gia_vao ) { print $db->errno() . ": " . $db->error(). "\n"; exit; }
       		echo "<div class='d'>";
-      echo '<u>Tham gia vào vở   </u>';
+     		echo '<u>Tham gia vào vở   </u>';
       		while ($tens = $tham_gia_vao->fetch_array()) {
       			# code...
       			echo '<a href="/TestingRDF/itemDetail.php?item_name='.$tens['ten_vo_roi'].'" target="_blank">';

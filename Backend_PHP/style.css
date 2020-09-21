@@ -6,13 +6,40 @@ ul{
 .b { order: 2; }
 .c { order: 3; }
 .d { order: 4; }
+.flex .image{
+	width: 100%;
+}
 .flex img{
-	width: 500px;
-	height: 500px;
+	width: 720px;
+	height: 640px;
+	margin-left: 28%;
+	margin-right: 25%;
 }
 .searchBar{
     height: 35px;
     width: 285px;
     position: relative;
 	top: 3px;
+}
+.Category .card{
+	display: inline-block;
+	width: 200px;
+	height: 150px;
+	align-items: center;
+	background-color: #68b0ab;
+}
+.Category .card:hover{
+	background-color: #006a71;
+}
+.Category .text{
+	margin: auto;
+	margin-top: 50px;
+	width: 100px;
+	height: 20px;
+	text-align: center;
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+
+
 }
